@@ -1,5 +1,14 @@
 {
   "sections": {
+        "type": "hero-splash",
+        "settings": {
+          "image": "your-image-handle.jpg",
+            "heading": "Summer Splash Sale",
+           "subheading": "Cool off with up to 50% off pool & beach gear!",
+            "button_text": "Shop Now",
+            "button_link": "/collections/summer-picks"
+          }
+        },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
