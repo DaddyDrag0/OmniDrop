@@ -3595,3 +3595,51 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
+/* Hero Splash Styles */
+.hero-splash {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+.hero-splash__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.7);
+}
+.hero-splash__overlay {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 213, 79, 0.2); /* sun-yellow tint */
+  pointer-events: none;
+}
+.hero-splash__content {
+  position: relative;
+  z-index: 1;
+  padding: 6rem 1rem;
+}
+.hero-splash__content h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+  margin-bottom: 1rem;
+}
+.hero-splash__content p {
+  font-size: 1.25rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  margin-bottom: 2rem;
+}
+.hero-splash__btn {
+  background-color: #FFD54F;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 9999px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.hero-splash__btn:hover {
+  background-color: #FF8A65;
+}
