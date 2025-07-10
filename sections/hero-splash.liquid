@@ -1,0 +1,61 @@
+{% comment %}
+  Hero Splash Section
+  Custom bright summer hero with CTA
+{% endcomment %}
+
+<section class="hero-splash">
+  <div class="hero-splash__bg" style="background-image: url({{ section.settings.image | img_url: '2048x' }});"></div>
+  <div class="hero-splash__overlay"></div>
+  <div class="hero-splash__content">
+    <h1>{{ section.settings.heading }}</h1>
+    <p>{{ section.settings.subheading }}</p>
+    {% if section.settings.button_text != blank %}
+      <a href="{{ section.settings.button_link }}" class="btn hero-splash__btn">
+        {{ section.settings.button_text }}
+      </a>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero Splash",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Summer Splash Sale"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Cool off with up to 50% off pool & beach gear!"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link",
+      "default": "/collections/summer-picks"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Splash",
+      "category": "Hero"
+    }
+  ]
+}
+{% endschema %}
